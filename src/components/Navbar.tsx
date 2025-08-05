@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import ThemeToggle from './ThemeToggle';
+import { useState } from "react";
+import { Menu, X, Zap } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'For Brands', href: '/brands' },
-    { name: 'For Influencers', href: '/influencers' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "For Brands", href: "/brands" },
+    { name: "For Influencers", href: "/influencers" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -24,10 +24,20 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-primary to-accent p-2 rounded-lg">
-              <Zap className="h-6 w-6 text-white" />
+            <div>
+              <img
+                src="/logo.png"
+                alt="HypeNest Logo"
+                className="w-32 h-32 object-contain "
+                // rounded-xl
+              />
             </div>
-            <span className="text-xl font-bold text-primary">InfluenceConnect</span>
+            {/* <div className="bg-gradient-to-r from-primary to-accent p-2 rounded-lg">
+              <Zap className="h-6 w-6 text-white" />
+            </div> */}
+            {/* <span className="text-xl font-bold text-primary">
+              InfluenceConnect
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,7 +47,7 @@ const Navbar = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(item.href) ? 'text-accent' : 'text-muted-foreground'
+                  isActive(item.href) ? "text-accent" : "text-muted-foreground"
                 }`}
               >
                 {item.name}
@@ -53,7 +63,11 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-muted-foreground hover:text-accent transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -67,7 +81,9 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors hover:text-accent ${
-                    isActive(item.href) ? 'text-accent' : 'text-muted-foreground'
+                    isActive(item.href)
+                      ? "text-accent"
+                      : "text-muted-foreground"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
