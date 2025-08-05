@@ -101,12 +101,16 @@ function Accordion({
 }
 
 const Faqs = () => (
+  // HERO SECTION
   <Layout>
     <section className="py-20 bg-hero">
       <div className="max-w-3xl mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          Frequently Asked <span className="text-accent">Questions</span>
+          Frequently Asked
+          <br />
+          <span className="text-accent mt-2 inline-block">Questions</span>
         </h1>
+
         <p className="text-xl text-white/90 mb-8">
           No-nonsense answers for brands and creators—because you’ve got better
           things to do.
