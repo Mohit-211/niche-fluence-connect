@@ -1,40 +1,51 @@
-import { ArrowRight, Upload, Users, Rocket, TrendingUp, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import Layout from '@/components/Layout';
-import dashboardPreview from '@/assets/dashboard-preview.jpg';
+import {
+  ArrowRight,
+  Upload,
+  Users,
+  Rocket,
+  TrendingUp,
+  CheckCircle,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Layout from "@/components/Layout";
+import dashboardPreview from "@/assets/dashboard-preview.jpg";
 
 const Brands = () => {
   const steps = [
     {
       icon: Upload,
-      title: 'Submit Brief',
-      description: 'Upload your campaign requirements, target audience, and budget details through our simple form.'
+      title: "Share Your Goals",
+      description:
+        "Tell us about your product, target audience, and what you want to achieve. We handle the details—you focus on results.",
     },
     {
       icon: Users,
-      title: 'Get Matched',
-      description: 'Our AI algorithm finds and presents the best-fitting influencers for your SaaS or D2C tool.'
+      title: "Get Matched",
+      description:
+        "We’ll handpick tech-savvy influencers who actually “get” your product and your market. No random lists. Only real fits.",
     },
     {
       icon: Rocket,
-      title: 'Launch Campaign',
-      description: 'Approve creators, set campaign guidelines, and watch your campaign go live across platforms.'
+      title: "Launch Campaigns",
+      description:
+        "You approve the plan. We manage creator onboarding, campaign execution, and all logistics—white-glove service, end to end.",
     },
     {
       icon: TrendingUp,
-      title: 'Track Results',
-      description: 'Monitor performance in real-time with detailed analytics and ROI tracking dashboard.'
-    }
+      title: "See Real Results",
+      description:
+        "Track engagement, signups, and ROI with transparent, jargon-free reports. You always know what’s working—and what’s not.",
+    },
   ];
 
   const benefits = [
-    'Access to 10,000+ vetted SaaS-focused influencers',
-    'AI-powered matching for perfect audience alignment',
-    'Real-time campaign performance tracking',
-    'Dedicated campaign management support',
-    'Transparent pricing with no hidden fees',
-    'Guaranteed deliverables and timeline adherence'
+    "Influencer selection done-for-you, not DIY lists or guesswork",
+    "Full campaign management from outreach to reporting",
+    "Tech-focused creator network, no generic lifestyle spam",
+    "Transparent pricing, no hidden fees or markups",
+    "Real-time analytics and honest performance tracking",
+    "Human support from the HypeNest team, always",
   ];
 
   return (
@@ -43,15 +54,21 @@ const Brands = () => {
       <section className="py-20 bg-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Scale Your SaaS with 
-            <span className="text-accent block mt-2">Targeted Influencer Campaigns</span>
+            Scale Your Tech Brand with
+            <span className="text-accent block mt-2">
+              Influencer Campaigns That Deliver
+            </span>
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Connect with influencers who understand your market and can authentically promote your SaaS or D2C tool to engaged audiences.
+            HypeNest is your partner for done-for-you influencer marketing. We
+            match your SaaS, D2C, or digital product with real creators—not just
+            followers—and manage campaigns from start to finish.
           </p>
-          <Button className="btn-hero text-lg px-8 py-4">
-            Start Your Campaign
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button className="btn-hero text-lg px-8 py-4" asChild>
+            <a href="/contact">
+              Get Started with HypeNest
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </section>
@@ -61,25 +78,27 @@ const Brands = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              How It Works for Brands
+              How HypeNest Works for Brands
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Launch successful influencer campaigns in four simple steps.
+              Launch influencer campaigns that <strong>actually</strong> move
+              the needle - in four easy steps.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
                 <Card key={index} className="feature-card text-center relative">
-                  <div className="absolute -top-4 left-4 bg-accent text-accent-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                  <div className="absolute -top-4 left-4 bg-accent text-accent-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg shadow-md">
                     {index + 1}
                   </div>
                   <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 mt-4">
                     <Icon className="h-8 w-8 text-accent" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">
+                    {step.title}
+                  </h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </Card>
               );
@@ -94,40 +113,52 @@ const Brands = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Success Story: CloudSync
+                Client Success: CloudSync
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                CloudSync, a file synchronization SaaS, partnered with us to reach productivity-focused audiences. 
-                Through targeted influencer campaigns, they achieved remarkable results.
+                CloudSync, a SaaS brand in the productivity space, partnered
+                with HypeNest to boost trial signups and user engagement. We
+                matched them with top creators in tech and business. The
+                results? Real, measurable impact.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">340%</div>
-                  <div className="text-sm text-muted-foreground">ROI Increase</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">125K</div>
+                  <div className="text-3xl font-bold text-accent mb-2">
+                    125K+
+                  </div>
                   <div className="text-sm text-muted-foreground">New Users</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">45%</div>
-                  <div className="text-sm text-muted-foreground">Conversion Rate</div>
+                  <div className="text-3xl font-bold text-accent mb-2">3x</div>
+                  <div className="text-sm text-muted-foreground">
+                    Brand Awareness
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">3x</div>
-                  <div className="text-sm text-muted-foreground">Brand Awareness</div>
+                  <div className="text-3xl font-bold text-accent mb-2">45%</div>
+                  <div className="text-sm text-muted-foreground">
+                    Conversion Rate
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent mb-2">
+                    100%
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Campaign Transparency
+                  </div>
                 </div>
               </div>
-              
-              <Button className="btn-hero">
+
+              <Button variant="outline" className="btn-secondary">
                 Download Full Case Study
               </Button>
             </div>
-            
+
             <div className="relative">
-              <img 
-                src={dashboardPreview} 
+              <img
+                src={dashboardPreview}
                 alt="Campaign Dashboard"
                 className="rounded-2xl shadow-large"
               />
@@ -141,13 +172,14 @@ const Brands = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose InfluenceConnect?
+              Why HypeNest?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We specialize in SaaS and D2C marketing, ensuring better results for your campaigns.
+              We do the heavy lifting - from strategy to reporting - so you can
+              focus on building your brand, not wrangling influencers.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -163,18 +195,19 @@ const Brands = () => {
       <section className="py-20 bg-hero">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Launch Your Campaign?
+            Ready to Launch With the Right Influencers?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join 500+ SaaS companies that trust InfluenceConnect for their influencer marketing.
+            Want a strategy call?{" "}
+            <span className="text-accent">Let’s talk. </span>
+            Your next campaign is a click away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-hero text-lg px-8 py-4">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" className="btn-secondary text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
-              Schedule Demo
+            <Button className="btn-hero text-lg px-8 py-4" asChild>
+              <a href="/contact">
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>

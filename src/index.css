@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,43 +11,58 @@
     /* Brand Colors */
     --background: 0 0% 100%;
     --foreground: 210 100% 8%;
-    
+
     /* Primary - Deep Blue */
     --primary: 210 100% 8%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 210 100% 12%;
-    
+
     /* Accent - Bright Green */
     --accent: 162 100% 39%;
     --accent-foreground: 0 0% 100%;
     --accent-hover: 162 100% 35%;
-    
+
     /* UI Colors */
     --card: 0 0% 100%;
     --card-foreground: 210 100% 8%;
-    
+
     --secondary: 210 40% 96%;
     --secondary-foreground: 210 100% 8%;
-    
+
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
-    
+
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 162 100% 39%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* Design System Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 8%) 0%, hsl(210 100% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(162 100% 39%) 0%, hsl(162 100% 35%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 8%) 0%, hsl(210 100% 15%) 50%, hsl(162 100% 39%) 100%);
-    
-    --shadow-soft: 0 4px 6px -1px hsl(210 100% 8% / 0.1), 0 2px 4px -1px hsl(210 100% 8% / 0.06);
-    --shadow-medium: 0 10px 15px -3px hsl(210 100% 8% / 0.1), 0 4px 6px -2px hsl(210 100% 8% / 0.05);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(210 100% 8%) 0%,
+      hsl(210 100% 12%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(162 100% 39%) 0%,
+      hsl(162 100% 35%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(210 100% 8%) 0%,
+      hsl(210 100% 15%) 50%,
+      hsl(162 100% 39%) 100%
+    );
+
+    --shadow-soft: 0 4px 6px -1px hsl(210 100% 8% / 0.1),
+      0 2px 4px -1px hsl(210 100% 8% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(210 100% 8% / 0.1),
+      0 4px 6px -2px hsl(210 100% 8% / 0.05);
     --shadow-large: 0 25px 50px -12px hsl(210 100% 8% / 0.25);
-    
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -69,36 +84,6 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    /* Dark mode overrides */
-    --background: 210 100% 4%;
-    --foreground: 0 0% 98%;
-    
-    --primary: 162 100% 39%;
-    --primary-foreground: 210 100% 4%;
-    --primary-hover: 162 100% 35%;
-    
-    --accent: 162 100% 39%;
-    --accent-foreground: 210 100% 4%;
-    --accent-hover: 162 100% 35%;
-    
-    --card: 210 100% 6%;
-    --card-foreground: 0 0% 98%;
-    
-    --secondary: 210 40% 12%;
-    --secondary-foreground: 0 0% 98%;
-    
-    --muted: 210 40% 12%;
-    --muted-foreground: 215 16% 65%;
-    
-    --border: 210 40% 18%;
-    --input: 210 40% 18%;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 4%) 0%, hsl(210 100% 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(162 100% 39%) 0%, hsl(162 100% 35%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 4%) 0%, hsl(210 100% 8%) 50%, hsl(162 100% 39%) 100%);
-  }
 }
 
 @layer base {
@@ -118,7 +103,7 @@
   .btn-hero {
     @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
   }
-  
+
   .btn-secondary {
     @apply bg-transparent border-2 border-primary text-primary font-semibold px-8 py-4 rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300;
   }
@@ -132,7 +117,7 @@
   .fade-in {
     @apply animate-[fadeIn_0.6s_ease-out];
   }
-  
+
   .slide-up {
     @apply animate-[slideUp_0.8s_ease-out];
   }
@@ -147,7 +132,7 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
-  
+
   .bg-hero {
     background: var(--gradient-hero);
   }

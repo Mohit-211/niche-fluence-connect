@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Menu, X, Zap } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,7 @@ const Navbar = () => {
     { name: "For Brands", href: "/brands" },
     { name: "For Influencers", href: "/influencers" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "FAQs", href: "/faqs" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -29,15 +28,8 @@ const Navbar = () => {
                 src="/logo.png"
                 alt="HypeNest Logo"
                 className="w-32 h-32 object-contain "
-                // rounded-xl
               />
             </div>
-            {/* <div className="bg-gradient-to-r from-primary to-accent p-2 rounded-lg">
-              <Zap className="h-6 w-6 text-white" />
-            </div> */}
-            {/* <span className="text-xl font-bold text-primary">
-              InfluenceConnect
-            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -53,8 +45,9 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
-            <Button className="btn-hero">Get Started</Button>
+            <Button asChild className="btn-hero">
+              <Link to="/contact">Contact Us</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -91,7 +84,9 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button className="btn-hero w-full">Get Started</Button>
+                <Button asChild className="btn-hero w-full">
+                  <Link to="/contact">Contact Us</Link>
+                </Button>
               </div>
             </div>
           </div>
