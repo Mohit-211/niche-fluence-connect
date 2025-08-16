@@ -63,15 +63,15 @@ const Index = () => {
   const testimonials = [
     {
       quote:
-        "InfluenceConnect helped us find the perfect creator for our project management tool. ROI increased by 340% in just three months.",
-      author: "David Park",
-      title: "CEO, TaskFlow",
+        "HypeNest helped us find the perfect creator for our project management tool. ROI increased by 70% in just three months.",
+      author: "Arjun Mehta",
+      title: "Bangalore",
     },
     {
       quote:
         "The quality of influencers and the seamless campaign management made this the best marketing investment we've made.",
-      author: "Jennifer Kim",
-      title: "Marketing Director, CloudSync",
+      author: "Neha Kapoor",
+      title: "New Delhi",
     },
   ];
 
@@ -112,33 +112,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/*       
-      <section
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-primary/80"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in">
-            Turn Your Tech Product Into a
-            <span className="text-accent block mt-2">Brand People Trust</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto slide-up">
-            Connect with top creators in your niche and launch influencer
-            campaigns that actually move the needle.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center slide-up">
-            <Button asChild className="btn-hero text-lg px-8 py-4">
-              <Link to="/contact">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-       */}
       {/* Features Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,7 +188,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Trusted by SaaS Founders
+              Trusted by Tech Founders
             </h2>
             <p className="text-xl text-muted-foreground">
               See what our clients say about their experience.
