@@ -145,41 +145,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Influencers */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Featured Creators
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Meet some of our top-performing influencers in the SaaS space.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredInfluencers.map((influencer, index) => (
-              <Card key={index} className="feature-card text-center">
-                <div className="relative w-24 h-24 mx-auto mb-6">
-                  <img
-                    src={influencer.image}
-                    alt={influencer.name}
-                    className="w-full h-full object-cover rounded-full border-4 border-accent/20"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {influencer.name}
-                </h3>
-                <p className="text-accent font-medium mb-4">
-                  {influencer.niche}
-                </p>
-                <div className="flex justify-between text-sm text-muted-foreground">
-                  <span>{influencer.followers} followers</span>
-                  <span>{influencer.engagement} engagement</span>
-                </div>
-              </Card>
-            ))}
-          </div>
+      {/* Micro-Ambassador Approach (compact) */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            From Celebrity Ambassadors to{" "}
+            <span className="text-accent">Micro-Ambassadors</span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-6">
+            Brand advocacy used to be limited to a single, expensive face.
+            Today, multiple niche influencers act as authentic
+            micro-ambassadors—each bringing a loyal audience that trusts their
+            judgment. The result: broader relevance, higher credibility, and
+            more efficient spend.
+          </p>
+          <ul className="text-sm md:text-base text-muted-foreground grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+            <li className="bg-card border border-border rounded-lg px-4 py-3">
+              Trust transfers from creator to brand
+            </li>
+            <li className="bg-card border border-border rounded-lg px-4 py-3">
+              Targeted reach across multiple niches
+            </li>
+            <li className="bg-card border border-border rounded-lg px-4 py-3">
+              Scalable impact without celebrity costs
+            </li>
+          </ul>
+          <Button asChild className="btn-hero">
+            <a href="/contact">Build Your Micro-Ambassador Roster</a>
+          </Button>
         </div>
       </section>
 
